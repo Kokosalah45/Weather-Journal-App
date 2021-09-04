@@ -1,0 +1,232 @@
+body{
+    background: linear-gradient(to left , #c31432, #240b36);
+    font-family: 'Oswald',monospace, sans-serif;
+    min-height: 100vh;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    padding : 0em;
+    box-sizing: border-box;
+    margin : 0em;
+}
+p{ 
+    margin : .5em;
+}
+.main-content{
+    
+    display : flex;
+    width: 70%;
+    max-width: 1000px;
+    padding : 0em;
+    margin : 0em;
+    border-radius: 10px;
+    justify-content: center;
+    
+  
+    
+  
+    
+   }
+.user-inputs{
+    display : flex;
+    padding : .2em;
+    flex-direction: column;
+    width: 70%;
+    background-color : red;
+    border-radius: 10px;
+    box-shadow: 5px 5px 40px 0px #0000004a;
+    background-color : white;
+    justify-content: space-around;
+    
+    
+}
+.holder{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.holder-zip{
+   
+    padding : 1em;
+    justify-content: center;
+    
+}
+.label{ 
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5em;
+ }
+ .input{ 
+    width : 80%;
+    margin-top: .5em;
+    border : 2px solid black;
+    padding : .5em;
+    text-align: center;
+    outline : none;
+}
+
+
+.buttons{
+    padding : 1em;
+    display : flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.button{
+    padding : .5em 1em;
+    border : 1px solid black;
+    background-color : inherit;
+    color : black;
+    transition: .2s all ease-in;
+    font-size : 1.2rem
+}
+
+.button:hover{
+    
+    border : 1px solid white;
+    
+    color : white;
+}
+#generate:hover{
+    background-color : green;
+}
+#reset:hover{
+    background-color : red;
+}
+
+
+
+
+
+.holder-entry{ 
+    
+    width : 30%;
+    padding: 1em 0;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+    background-color: #b5eded;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transition: 0.3s all ease-in;
+
+    margin-left: -30%;
+    
+
+}
+.visible{
+    margin-left: 0%;
+}
+
+.title{ 
+    padding: .5em;
+    max-width: 10ch;
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+ #entryHolder{
+    
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 60%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.date{
+    font-size: 1.8rem;
+}
+
+.weather-status{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.city-country{
+    font-size: 1.5rem;
+}
+#temp{
+    font-size: 3rem;
+}
+.description{
+    font-size: 2rem;
+}
+.weather-icon{
+    margin-top: -1.5em;
+}
+#content{
+    font-size: 1.5rem;
+}
+
+
+
+
+@media (max-width: 43.75em) {
+
+    .main-content{
+        width : 95vw;
+
+    }
+    
+    .title{
+        max-width: 20ch;
+        font-size: 1.3rem;
+    }
+    .date{
+        max-width: 20ch;
+        font-size: 1.2rem;
+    }
+    .city-country{
+        max-width: 20ch;
+        font-size: 1rem;
+    }
+    #temp{
+        max-width: 20ch;
+        font-size: 2rem;
+    }
+    .description{
+        max-width: 20ch;
+        font-size: 1.5rem;
+    }
+    #content{
+        max-width: 20ch;
+        font-size: 1.2rem;
+    }
+    .label{
+        font-size : 1.5rem
+    }
+  
+    
+   
+    /*BUTTONS*/
+    .buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+    .button{
+        font-size : 1rem;
+        width : 70%;
+        
+        
+    }
+    #reset{
+        margin-top : .5em;
+    }
+    /* entryHolder */
+    .holder-entry.visible{
+        font-size: 1.2rem;
+    }
+
+    
+}
+
+
+

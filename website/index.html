@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script  defer src = "./script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+ 
+    <main class="main-content">
+     <div class="user-inputs" >
+         <section class ="holder holder-zip">
+                <label class = "label" for="zip">Enter Zipcode here</label>
+                <input class= "input" type="text" name = "zipcode" id="zip" >
+         </section>
+         <section class ="holder holder-feel">
+                <label class = "label" for="feelings">How are you feeling today?</label>
+                <textarea class= "input" id="feelings" name="feeling" rows="9" cols="100"></textarea>
+              
+         </section>
+         <div class="buttons">
+            <button id="generate" class = "button" type = "submit"> Generate </button>
+            <button id="reset" class="button" disabled> Reset </button>
+         </div>
+    </div>
+    <aside class ="holder-entry">
+        <h3 class = "title">Most Recent Entry</h3>
+        <section id = "entryHolder">
+                <p id = "date">0</p>
+                <div class="weather-status">
+                    <p class="city-country">Cairo / Egypt</p>
+                    <p id = "temp">0</p>
+                    <p class="description">0</p>
+                    <img class = "weather-icon"src="" alt="not found">
+                </div>
+                
+                <div id = "content">I'M HAPPY</div>
+         </section>
+    </aside>
+        
+    </main>
+
+    
+</body>
+</html>
+<!-- 1rem = 16px -->
