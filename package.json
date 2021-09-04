@@ -1,0 +1,27 @@
+{
+  "name": "udacity-weather-jorunal",
+  "version": "1.0.0",
+  "description": "1. creating a server\r 2. using asynch programming\r 3. adding elements to the page dynamically \r 4. learning about responsive design \r 5. using various attributes through js\r 6. communicating with the server \r 7. http requests and headers",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kokosalah45/Weather-Journal-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kokosalah45/Weather-Journal-App/issues"
+  },
+  "homepage": "https://github.com/Kokosalah45/Weather-Journal-App#readme"
+}
