@@ -3,7 +3,7 @@ let express = require('express');
 let path = require('path');
 let cors = require('cors');
 let bodyParser = require('body-parser');
-
+let port =   3000 || process.env.PORT;
 let app = express();
 let jsonParser = bodyParser.json();
 let urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -28,6 +28,6 @@ app.post('/insertdata', urlencodedParser, function (req, res,next) {
     })
 
 
-app.listen(3000 , ()=>{
+app.listen(port , ()=>{
     console.log("server is listening !");
 });
