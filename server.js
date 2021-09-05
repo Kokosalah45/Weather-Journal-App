@@ -1,4 +1,4 @@
-let projectData = [];
+let projectData = {};
 let express = require('express');
 let path = require('path');
 let cors = require('cors');
@@ -8,7 +8,6 @@ let app = express();
 let jsonParser = bodyParser.json();
 let urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-
 app.use(express.static('website'));
 app.use(cors());
 app.use(jsonParser);
@@ -17,14 +16,15 @@ app.use(jsonParser);
 
 
 app.post('/insertdata', urlencodedParser, function (req, res,next) {
-    console.log(req.body);
-    if(req.body){ projectData.push(req.body);
+    
+    if(req.body){ 
+        projectData = req.body;
     res.send('done !');
  }
     next();
     })
     app.get('/getmostrecentdata' , urlencodedParser, function (req, res, next) {
-        res.send(projectData[projectData.length - 1]);
+        res.send(projectData);
     })
 
 

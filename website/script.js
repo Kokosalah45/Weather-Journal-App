@@ -72,7 +72,7 @@ let reset = () =>{
 let updateUi = (data) =>{ 
   
   weatherStatus.children[0].innerHTML =  `${data.country} / ${data.name}`;
-  weatherStatus.children[1].innerHTML =  `${Math.round(data.temp-273.5)}&degC`;
+  weatherStatus.children[1].innerHTML =  `${Math.round(data.temp)}&degC`;
   weatherStatus.children[2].innerHTML = `${data.description}`;
   weatherStatus.children[3].src = ` http://openweathermap.org/img/wn/${data.icon}@2x.png`;
   content.innerHTML = feelingVal;
@@ -117,7 +117,8 @@ buttons.addEventListener('click' , (e)=>{
 let getDataFromApi = async (zipcode) =>{
     try{ 
       
-        let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${API_KEY}`);
+        let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${API_KEY}&units=metric
+        `);
         let newData = await res.json();
 
         if(newData.cod == 200){ 
