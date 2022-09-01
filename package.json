@@ -2,7 +2,6 @@
   "name": "udacity-weather-jorunal",
   "version": "1.0.0",
   "description": "1. creating a server\r 2. using asynch programming\r 3. adding elements to the page dynamically \r 4. learning about responsive design \r 5. using various attributes through js\r 6. communicating with the server \r 7. http requests and headers",
-  "main": "server.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
