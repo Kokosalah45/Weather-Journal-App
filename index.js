@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const port = 5000 || process.env.PORT;
+
 const app = express();
 const jsonParser = bodyParser.json();
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -23,6 +23,6 @@ app.get("/getmostrecentdata", urlencodedParser, function (req, res, next) {
   res.send(projectData);
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("server is listening !");
 });
