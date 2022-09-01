@@ -14,6 +14,7 @@ const resetButton = document.querySelector('#reset');
 /* ---------------------------------------------------------------------------------------------- */
 
 /*variables */ 
+const reg = new RegExp(/^-?\d*\.?\d*$/);
 const currentDate = new Date();
 const API_KEY = "780993f173571daf4551224776f7ecce";
 const errors = {
@@ -26,8 +27,6 @@ let feelingVal;
 
 /* Helper Functions */ 
 const validateInput = ()=>{
-
-  const reg = new RegExp(/^-?\d*\.?\d*$/);
   if (zipCodeVal === '')
     return 'E';
   else if (zipCodeVal.length === 5 && reg.test(zipCodeVal))
@@ -120,6 +119,7 @@ let getDataFromApi = async (zipcode) =>{
         let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${API_KEY}&units=metric
         `);
         let newData = await res.json();
+        console.log(newData);
 
         if(newData.cod == 200){ 
           zipcode.placeholder = "";
@@ -147,7 +147,7 @@ let getDataFromApi = async (zipcode) =>{
 
 }
 let insertDataToServer = async (data) =>{ 
-   await fetch('/insertdata', {
+   await fetch('insertdata', {
     method: 'POST', 
     mode: 'cors', 
     cache: 'no-cache', 
@@ -165,7 +165,7 @@ let insertDataToServer = async (data) =>{
 }
 
 let mostRecentEntry = async () =>{
-    let res =  await fetch('./getmostrecentdata');
+    let res =  await fetch('/getmostrecentdata');
     let newData =  await res.json();
     updateUi(newData);
     

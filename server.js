@@ -1,12 +1,12 @@
-let projectData = {};
-let express = require('express');
-let path = require('path');
-let cors = require('cors');
-let bodyParser = require('body-parser');
-let port =   3000 || process.env.PORT;
-let app = express();
-let jsonParser = bodyParser.json();
-let urlencodedParser = bodyParser.urlencoded({ extended: false });
+const projectData = {};
+const express = require('express');
+const path = require('path');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const port =   3000 || process.env.PORT;
+const app = express();
+const jsonParser = bodyParser.json();
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.use(express.static('website'));
 app.use(cors());
@@ -21,8 +21,8 @@ app.post('/insertdata', urlencodedParser, function (req, res,next) {
         projectData = req.body;
     res.send('done !');
  }
-    next();
-    })
+ next();
+})
     app.get('/getmostrecentdata' , urlencodedParser, function (req, res, next) {
         res.send(projectData);
     })
